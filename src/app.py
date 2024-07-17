@@ -27,6 +27,26 @@ class App(tk.Tk):
         """Internal Function that is called to build the UI."""
         self.screen['text'] = self.display_value
         self.screen.grid(column=0, row=0, columnspan=3)
+
+        tk.Button(text='9', command=lambda: 0).grid(column=2, row=1)
+        tk.Button(text='8', command=lambda: 0).grid(column=1, row=1)
+        tk.Button(text='7', command=lambda: 0).grid(column=0, row=1)
+        tk.Button(text='6', command=lambda: 0).grid(column=2, row=2)
+        tk.Button(text='5', command=lambda: 0).grid(column=1, row=2)
+        tk.Button(text='4', command=lambda: 0).grid(column=0, row=2)
+        tk.Button(text='3', command=lambda: 0).grid(column=2, row=3)
+        tk.Button(text='2', command=lambda: 0).grid(column=1, row=3)
+        tk.Button(text='1', command=lambda: 0).grid(column=0, row=3)
+        tk.Button(text='0', command=lambda: 0).grid(column=0, row=4, columnspan=2)
+
+        tk.Button(text='+', command=lambda: 0)
+        tk.Button(text='-', command=lambda: 0)
+        tk.Button(text='*', command=lambda: 0)
+        tk.Button(text='/', command=lambda: 0)
+        tk.Button(text='=', command=lambda: 0)
+        tk.Button(text='C', command=lambda: 0)
+        tk.Button(text='.', command=lambda: 0)
+
         self.__update_display()
 
     def __update_display(self) -> None:
