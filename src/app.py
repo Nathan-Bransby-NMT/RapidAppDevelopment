@@ -1,6 +1,8 @@
 import tkinter as tk
+from typing import Literal
 
 type Calculation = tuple[int | None, str | None, int | None]
+type Operator = Literal['+', '-', '/', '*']
 
 DEFAULT_VALUE: Calculation = (1, '+', 1)
 
@@ -10,6 +12,10 @@ class App(tk.Tk):
 
     log: list[Calculation] = []
     _display_value: Calculation = DEFAULT_VALUE
+
+    def add_value(self, value: int | Operator) -> None:
+        ...
+        #command=lambda: self.add_value(1)
 
     def __init__(self) -> None:
         super().__init__()
